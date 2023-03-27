@@ -19,7 +19,6 @@
 //= require semantic-ui/dropdown
 
 
-$(function(){
-  $('.ui.dropdown').dropdown();
-})
-
+$(document).on('turbolinks:load', function(){
+    $('.ui.dropdown').dropdown();
+});
