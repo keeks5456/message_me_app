@@ -1,8 +1,10 @@
       <a class="item">
         <i class="circular inverted blue home icon"></i>
+        <!--<%= link_to "Chatroom", root_path, class: "item" %>-->
         Chatroom
       </a>
       <a class="item">
+        <i class="circular inverted blue paper plane icon"></i>
         Messages
       </a>
       <div class="right menu">
@@ -10,7 +12,7 @@
           Account <i class="dropdown icon"></i>
           <div class="menu">
             <a class="item">Log out</a>
-            <a class="item">Log in</a>
+            <%= link_to "Log in", login_path, class: "item" %>
             <a class="item">Sign up</a>
           </div>
         </div>
