@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
     
-    def login 
-        puts "login" 
+    def new 
+        
+    end
+    
+    def create 
+        
     end
 end
