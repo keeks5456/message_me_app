@@ -14,6 +14,6 @@ User.create(username: "mae", password: "123123")
 
 
 Message.create(body: "Hello", user_id:User.first)
-Message.create(body: "Hello", user_id:User.last)
+Message.create(body: "hi", user_id:User.last)
 
 puts "data seeded"
