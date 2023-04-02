@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: "steve", password: "123123")
+User.create(username: "sally", password: "123123")
+User.create(username: "jimmy", password: "123123")
+User.create(username: "greg", password: "123123")
+User.create(username: "mae", password: "123123")
+
+
+Message.create(body: "Hello", user_id:User.first)
+Message.create(body: "Hello", user_id:User.last)
+
+puts "data seeded"
