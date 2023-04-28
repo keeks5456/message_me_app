@@ -4,7 +4,8 @@ class User < ApplicationRecord
     validates :password, length: { in: 6..20 }
     
     has_many :messages, dependent: :destroy
-
+    has_many :friends, dependent: :destroy
+    
     has_secure_password
     
     private 
