@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_29_232440) do
+ActiveRecord::Schema.define(version: 2023_04_29_234405) do
 
   create_table "friend_requests", force: :cascade do |t|
     t.integer "requestor_id"
     t.integer "receiver_id"
-    t.string "status"
+    t.string "status", default: "pending"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_request_id"
   end
 
   create_table "messages", force: :cascade do |t|
