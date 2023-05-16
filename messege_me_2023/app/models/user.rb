@@ -7,12 +7,12 @@ class User < ApplicationRecord
     # messages
     has_many :messages, dependent: :destroy
     # friend request
-    has_many :friend_requests_as_requestor, foreign_key :requestor_id, class_name: :FriendRequest
-    has_many :friend_requests_as_receiver, foreign_key :receiver_id, class_name: :FriendRequest
+    has_many :friend_requests, dependent: :destroy
+    has_many :pending_friends, through: :friend_requests, source: :friend
     # friendships
-    has_many :friendships
-    has_many :friendships, foreign_key: :friend_id
-    has_many :friends, through: :friendships
+    # has_many :friendships
+    # has_many :friendships, foreign_key: :friend_id
+    # has_many :friends, through: :friendships
     
     
     private 
