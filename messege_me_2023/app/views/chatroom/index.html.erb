@@ -2,8 +2,8 @@
   <i class="circular inverted blue comments icon"></i>
   Chatroom
 </h4>
-    <h1>Welcome 
-    <!-- current user name here-->
+    <h1>Welcome To The Main Chatroom:
+    <%= current_user.username %>
     </h1>
 
 <!--beginning of chatroom-->
@@ -39,12 +39,7 @@
             <a class="item active">
               Home
             </a>
-            <a class="item">
-              Messages
-            </a>
-            <a class="item">
-              Friends
-            </a>
+            <%= link_to "Rooms", rooms_path %>
           </div>
       </div>
     </div>
