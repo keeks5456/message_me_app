@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  
+
   def index
     @current_user = current_user
     redirect_to '/signup' unless @current_user
