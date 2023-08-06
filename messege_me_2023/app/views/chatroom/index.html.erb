@@ -16,7 +16,7 @@
         </div>
     </div>
       <div class="extra content">
-        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: messages_path, remote: true) do |form| %>
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |form| %>
           <div class="field">
             <div class="ui fluid icon input">
               <%= form.text_field :body %>
