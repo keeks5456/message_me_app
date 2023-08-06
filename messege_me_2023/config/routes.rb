@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-    resources :messages
     resources :rooms do
       resources :messages
     end
+    
     resources :users
     resources :rooms
     resources :users, except: [:new]
@@ -16,5 +16,5 @@ Rails.application.routes.draw do
     delete 'logout', to: 'sessions#destroy'
     post 'message', to: 'messages#create'
     get 'rooms', to: 'rooms#index' 
-    mount ActionCable.server, at: '/cable'
+    # mount ActionCable.server, at: '/cable'
 end

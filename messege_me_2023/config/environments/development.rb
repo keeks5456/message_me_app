@@ -52,8 +52,11 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # option1
-  config.action_cable.disable_request_forgery_protection = true 
+  # config.action_cable.disable_request_forgery_protection = true 
   # option2
   # config.action_cable.allow_request_origins = ['https://us-west-1.console.aws.amazon.com/cloud9/ide/5676fa4306c04fa094bfac1272229c1d?region=us-west-1#']
+  # option3
+  # config.action_cable.url = "wss://5676fa4306c04fa094bfac1272229c1d.vfs.cloud9.us-west-1.amazonaws.com/cable"
+  # config.action_cable.allowed_request_origins = ['https://5676fa4306c04fa094bfac1272229c1d.vfs.cloud9.us-west-1.amazonaws.com']
   config.hosts << "5676fa4306c04fa094bfac1272229c1d.vfs.cloud9.us-west-1.amazonaws.com"
 end

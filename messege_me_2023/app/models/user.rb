@@ -7,6 +7,6 @@ class User < ApplicationRecord
     # messages
     has_many :messages, dependent: :destroy
     
-    scope :all_except, -> (user) {where.not(id:user)}
+    scope :all_except, -> (user) { where.not(id:user)}
     private 
 end

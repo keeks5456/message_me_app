@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
     @current_user = current_user
     redirect_to '/signup' unless @current_user
     @rooms = Room.public_rooms
-    @users = User.except(current_user)
+    @users = User.all_except(current_user)
   end
   
   def show
@@ -15,7 +15,6 @@ class RoomsController < ApplicationController
     @room = Room.new
     @message = Message.new
     @messages = @single_room.messages
-    
     
     render "index"
   end

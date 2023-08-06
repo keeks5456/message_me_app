@@ -18,11 +18,12 @@
     </div>
   </div>
   <div class="">
-   <div class="col-md-10 bg-dark text-light">
+   <div class="col-md-10 room-msg-viewer">
   <% if @single_room %>
     <h4 class="text-center"> <%= @single_room.name %> </h4>
     <%= turbo_stream_from @single_room %>
     <div id="messages">
+      <%= render @message %>
     </div>
     <%= render partial: 'layouts/partials/room_message_form' %>
   <% end %>
