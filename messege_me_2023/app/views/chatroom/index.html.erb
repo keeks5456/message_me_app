@@ -2,7 +2,7 @@
   <i class="circular inverted blue comments icon"></i>
   Chatroom
 </h4>
-    <h1>Welcome To The Main Chatroom:
+    <h1 class="welcome-user">Welcome To The Main Room:
     <%= current_user.username %>
     </h1>
 
@@ -12,42 +12,13 @@
     <div class="ui fluid raised card chatbox">
       <div class="content" id="messages">
         <div class="ui feed" id="message-container">
-          <%= render @messages%>
+          <%= render partial: "layouts/partials/messages" %>
         </div>
     </div>
-      <div class="extra content">
-        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |form| %>
-          <div class="field">
-            <div class="ui fluid icon input">
-              <%= form.text_field :body %>
-             <%= form.button'<i class="border left inverted blue edit icon"></i>'.html_safe %>
-            </div>
-          </div>
-          <% end %>
-        </form>
-      </div>
   </div>
 </div>
 
 <!--end of chatroom-->
 
-<!--beginning of menu-->
-  <div class="four wide column">
-    <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui inverted vertical menu">
-            <a class="item active">
-              Home
-            </a>
-            <a class="item">
-             <%= link_to "Room", rooms_path %>
-            </a>
-            <a class="item">
-              Friends
-            </a>
-          </div>
-      </div>
-    </div>
-  </div>
-<!--end of menu-->
+
 </div>

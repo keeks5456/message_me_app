@@ -1,9 +1,6 @@
 <%= semantic_icon('circular inverted blue home') %>
-  <%= link_to "Chatroom", root_path, class: "item" %>
-      <a class="item">
-        <!--<i class="circular inverted blue paper plane icon"></i>-->
-        Messages
-      </a>
+  <%= link_to "Main Room", chatroom_path, class: "item" %>
+    <%= link_to "Rooms", root_path, class: "item" %>
       <div class="right menu">
         <div class="ui dropdown item">
           Account <i class="dropdown icon"></i>
