@@ -1,7 +1,0 @@
-<div>
-  <div class="message-box"><%= message.user.id%></div>
-  <% unless message.room.is_private %>
-    <h6 class="name"> <%= message.user.username %> </h6>
-  <% end %>
-  <%= message.body %>
-</div>

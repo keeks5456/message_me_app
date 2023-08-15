@@ -10,7 +10,7 @@
 
   .col-md-10 {
     height: 100vh;
-    overflow: scroll;
+    // overflow: scroll;
   }
 
   .msg-content {
@@ -18,7 +18,7 @@
     margin-right: 5px;
   }
   
-  .message-box, .room-msg-viewer{
+  .message-box{
   width: fit-content;
   max-width: 40%;
   padding: 5px;
